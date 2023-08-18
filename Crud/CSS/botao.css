@@ -1,0 +1,115 @@
+.button{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: black;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    /* mozzila exemplos desse efeito */
+    transition: box-shadow .6s ease;
+}
+.button.blue{
+    background-color: blue;
+}
+
+.button.green{
+    background-color: green;
+}
+
+.button.red{
+    background-color: red;
+}
+
+.button:hover{
+    /* A propriedade CSS inset é uma abreviação que corresponde 
+    às imagens superior, direita, inferior e/ou esquerda
+    veja o site: https://developer.mozilla.org */
+    box-shadow:inset 200px 0 0 #b2d3e2ca
+}
+/* responsividade */
+@media(max-width:480px){
+.button.mobile{
+    color:transparent;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    top: 90vh;
+    left: 80vw;
+}
+.button.mobile::before{
+    color: black;
+    width:100%;
+    height: 100%;
+    font-size: 2rem;
+    
+}
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal_active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.modal-content{
+display: flex;
+flex-direction: column;
+width: 50%;
+margin: 15vh auto;
+padding-bottom: 20px;
+background-color: #fff;
+box-shadow: 1px 1px 10px black;
+gap: 20px;
+}
+
+.modal-header{
+    display: flex;
+    position: relative;
+    height: 40px;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 40px;
+}
+.modal-close{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.modal-close:hover{
+    background-color: #ff4949;
+    color: #fff;
+}
+
+.modal-form{
+    display: flex;
+    padding: 0 20px;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.modal-field{
+    width: calc(50% - 10px);
+    height: 40px;
+    border-style: none;
+    box-shadow: 0 0 2px black;
+    padding:0 10px;
+    font-size: 1rem;
+}
